@@ -27,9 +27,13 @@ class _FinishTestState extends State<FinishTest> {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushAndRemoveUntil<dynamic>(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute<dynamic>(
+                    builder: (BuildContext context) => HomePage(),
+                  ),
+                  (route) =>
+                      false, //if you want to disable back feature set to false
                 );
               },
               child: const Text("Finish"))

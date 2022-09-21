@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             save();
             if (currentDT.isAfter(startDate) && currentDT.isBefore(endDate)) {
-              if (hr >= 7 && hr <= 9) {
+              if (hr >= 8 && hr <= 10) {
                 if (diffMint >= 360) {
                   Navigator.push(
                     context,
